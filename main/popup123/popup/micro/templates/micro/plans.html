@@ -1,0 +1,114 @@
+{% extends 'micro/base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    .body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .box111 {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        margin: 50px auto;
+
+
+    }
+
+    .box222 {
+        width: 300px;
+        height: 380px;
+        border: 2px solid #0078d4;
+        margin: 50px 34px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+        border-radius: 10px;
+
+    }
+
+    .payment {
+        display: inline-block;
+        color: #0078d4;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .box222_button {
+        background-color: #0078d4;
+        width: 90%;
+        font-size: large;
+        border: none;
+        color: white;
+    }
+
+    .vikash {
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .vikash_btn {
+        width: 30%;
+    }
+
+    .plan_top_img {
+        width: 100%;
+        height: 300px;
+        border-top: 1px solid;
+        position: relative;
+    }
+
+    .plan_top_text {
+        position: absolute;
+        top: 63px;
+        left: 411px;
+        border: 2px solid;
+        border-radius: 6px;
+        padding: 0px 20px;
+
+    }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+
+<div class="plan_top_text">
+    <h1>Microsoft Support Plans</h1>
+</div>
+<div class="box111">
+    <div class="box222">
+        <h2>Microsoft 365</h2>
+        <h2>1年間契約</h2>
+        <p class="box2">
+        <p class="payment"> <i class="fa-solid fa-yen-sign"></i> 30000 </p> For 1 year</p>
+        <p> 1年以内に問題が発生した場合、コンピュータの修理は無料です.</p>
+        <a href="{% url 'payment' %}"><button class="box222_button" type="submit">Buy Now</button></a>
+
+    </div>
+    <div class="box222">
+        <h2>Microsoft 365</h2>
+        <h2>５年間契約</h2>
+        <p class="box2">
+        <p class="payment"> <i class="fa-solid fa-yen-sign"></i> 40000 </p> For 5 year</p>
+        <p>5年以内に問題が発生した場合、コンピュータの修理は無料です. 5年以内に新しいコンピューターを購入すると、新しいコンピューターの修理は残りの期間は無料になります.</p>
+        <a href="{% url 'payment' %}"><button class="box222_button" type="submit">Buy Now</button></a>
+
+
+    </div>
+    <div class="box222">
+        <h2>Microsoft 365</h2>
+        <h2>ずっとの契約
+        </h2>
+        <p class="box2">
+        <p class="payment"> <i class="fa-solid fa-yen-sign"></i> 50000 </p>For lifetime</p>
+        <p>ずっとの契約は一生保障まで使うことできますパソコン買い換える時同じ契約はパソコンに入れることできます.</p>
+        <a href="{% url 'payment' %}"><button class="box222_button" type="submit">Buy Now</button></a>
+
+
+    </div>
+</div>
+
+
+{% endblock body %}

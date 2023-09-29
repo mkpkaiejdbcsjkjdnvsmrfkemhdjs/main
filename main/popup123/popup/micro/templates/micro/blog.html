@@ -1,0 +1,66 @@
+{% extends 'micro/base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #e2e2e2;
+    }
+
+    .box123 {
+        width: 80%;
+        margin: 50px auto;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 50px;
+    }
+
+    .vikki {
+        text-align: center;
+    }
+
+    .img_vala {
+        display: flex;
+        align-items: center;
+    }
+
+    .img_vala img {
+        margin-right: 50px;
+    }
+    .vikki img{
+        width: 170px;
+        height: 250px;
+    }
+    .add_extra{
+        text-align: center;
+    }
+</style>
+{% endblock style %}
+
+{% block body %}
+<div class="box123">
+    <p>Posted on December 11, 2019</p>
+
+    <div class="img_vala">
+        <div class="vikki">
+            <img src="{% static 'micro/images/mikeid.jpeg' %}" alt="img">
+            <!-- <p>the blue badge…</p> -->
+        </div>
+
+        <div class="box2">
+            <p>I joined Microsoft in late 2012 with 10 years of software development under my belt and I can remember being very unsure whether I’d make it through the challenging first few months of the job but the endless cycle of new technology soon got a grip of me and those months quickly turned into years and decades.</p>
+            <p>In 2012, I was hired into developer consultancy, working mostly behind closed doors to help UK software vendors build on the Microsoft platform. It was a role that proved to be both deep and broad within a really skilled team and it gave me great opportunities to learn.</p>
+        </div>
+    </div>
+   <div class="add_extra">
+       
+       <h5>I currently working in microsoft Japan.</h5>
+
+   </div>
+</div>
+
+
+
+
+{% endblock body %}

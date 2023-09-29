@@ -1,0 +1,226 @@
+{% extends 'micro/base.html' %}
+{% load static %}
+{% block style %}
+<style>
+  .pay_main1 {
+    display: flex;
+    flex-direction: row;
+    /* margin-bottom: 400px; */
+    position: absolute;
+    top: 422px;
+    left: 338px;
+  }
+
+
+  .dropdown-menu {
+    width: 800px;
+    border: none;
+  }
+
+  .pay_img {
+    position: relative;
+    opacity: 25%;
+  }
+
+  .jogi123 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+  }
+
+  .jogi12 {
+    margin: 0 20px;
+    
+
+  }
+
+  .cash_pay1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+  }
+
+  .image123 {
+    padding-inline: 155px;
+  }
+
+  .card_text1 {
+    font-style: italic;
+  }
+
+  .ishu1 {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    border-radius: 10px;
+    /* border: 2px solid; */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ishu2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+  }
+
+  .ishu2 h3 {
+    /* text-align: left; */
+    font-weight: bold;
+
+  }
+
+  .ishu3 {
+    padding: 10px 0px;
+  }
+
+  .plan_top_text {
+
+    padding: 0px 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 27px;
+  }
+</style>
+{% endblock style %}
+
+
+{% block body %}
+<h2 class="plan_top_text">Microsoft 365 Apps for business</h2>
+<div class="ishu1">
+  <div class="ishu2">
+    <h3 class="ishu3">Let's get you started</h3>
+    <p class="ishu3">Enter your work or school email address, we'll check if you need to create a new account for
+      Microsoft 365 Apps for business.</p>
+    <p>Name</p>
+    <input type="text" placeholder="Enter your name">
+  </div>
+
+</div>
+<div class="pay_img">
+ 
+  <img src="{% static 'micro/images/homeback.avif' %}" width="100%" height="420px"  alt="">
+</div>
+
+<div class="pay_main1">
+  <div class="dropdown ">
+    <button class="btn btn-primary dropdown jogi12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Cards (Debit/Credit)
+    </button>
+    <ul class="dropdown-menu ">
+      <div class="row jogi123 ">
+
+        <div class="col-8  ">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+            class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1"> Cards (Debit/Credit)</h4>
+            <div class="vikash">
+              <form class="needs-validation" novalidate="">
+                <hr class="my-4">
+
+                <h4 class="mb-3">Payment</h4>
+
+
+
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name </label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                    <!-- <small class="text-muted">Full name as displayed on card</small> -->
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit Card Number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiry Date</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="cc-cvv" class="form-label">Security Code(CVV)</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="vikash_btn">
+                  <a href="{% url 'error' %}" class="w-100 btn btn-primary btn-lg">Pay Now</a>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+
+  <div class="dropdown  first">
+    <button class="btn btn-primary dropdown jogi12" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Cash(Combini)
+    </button>
+    <ul class="dropdown-menu">
+      <div class="row jogi123  ">
+
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+            class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1"> Cash(Combini)</h4>
+            <div>
+
+              <div class="cash_pay1">
+
+                <div class="image123">
+                  <h1>Google Play Card</h1>
+                  <img src="{% static 'micro/images//Gcard.jpeg' %}" width="200px" height="250px" alt="">
+                </div>
+                <div class="image1">
+                  <h1>App store & iTunes</h1>
+                  <img src="{% static 'micro/images//Acard.jpeg' %}" width="200px" height="250px" alt="">
+                </div>
+              </div>
+              <div class="card_text1">
+                <h5>These cards will be used to install security software</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+</div>
+
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+{% endblock script %}
+
+
+
+{% endblock body %}

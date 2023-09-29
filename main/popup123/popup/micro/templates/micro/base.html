@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <title> {% block title %} Microsupport - Apps & Gaming {% endblock title %} </title>
+
+  <link rel="stylesheet" href="{% static 'micro/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'micro/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'micro/css/all.min.css' %}">
+  {% block base %} {% endblock base %}
+  <style>
+    .yogi {
+      height: 60px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+     
+    }
+    header{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 11;
+    }
+
+    ul li {
+      display: inline-block;
+      padding-left: 15px;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ul li a:hover {
+      color: black;
+      text-decoration: underline;
+    }
+
+    h5 {
+      display: inline-block;
+      margin-top: 12px;
+      margin-left: 5px;
+    }
+
+    .yogi img {
+      height: 25px;
+      width: 25px;
+      margin-left: 76px;
+      margin-top: 14px;
+    }
+
+    .foot {
+      width: 100vw;
+      height: 150px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .pad {
+      padding: 0px 70px;
+
+    }
+
+    footer {
+      background-color: lightgray;
+    }
+
+
+
+
+    .head_button {
+      position: absolute;
+      left: 1113px;
+      top: 10px;
+    }
+
+    .social {
+      display: flex;
+      margin: 20px 100px;
+      align-items: center;
+    }
+
+    .social p {
+      font-size: x-large;
+    }
+
+    .dist {
+      margin: 0 20px;
+    }
+
+    .box {
+      background-color: #f2f2f2;
+      width: 100%;
+      display: flex;
+      padding: 50px;
+      justify-content: center;
+    }
+
+    .box1 {
+      margin: 0 50px;
+      color: #616161;
+    }
+
+    .box1 h3 {
+      color: black;
+    }
+
+    .nav-link {
+      color: black;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .round {
+
+      position: absolute;
+      left: 579px;
+      top: 10px;
+      border: 1px solid;
+      border-radius: 3px;
+      height: 31px;
+      padding: 0 5px;
+    }
+
+    .round p:hover {
+      text-decoration: underline;
+    }
+
+    .round p {
+      font-weight: 500;
+    }
+
+    .budhu {
+      position: absolute;
+      left: 980px;
+      top: 16px;
+    }
+    .font1{
+      padding: 0 7px;
+    }
+  </style>
+  {% block style %} {% endblock style %}
+</head>
+
+<body>
+
+  <header>
+    <div class="yogi">
+      <img src="{% static 'micro/images/microsoft.png' %}" alt="">
+
+      <h5>Microsoft</h5>
+      <ul>
+        {% url 'home' as hm %}
+        <li><a href="{{hm}}">Professional</a></li>
+        {% url 'blog' as bg %}
+        <li><a href="{% url 'support' %}">Support</a></li>
+        <li><a href="{% url 'plan' %}">Computer Support</a></li>
+      </ul>
+      <div class="round">
+        <p> Buy Microsoft 365 </p>
+      </div>
+      <div class="budhu">
+       
+      
+      </div>
+      <div class="head_button">
+        <div class="mx-2">
+          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button>
+        </div>
+      </div>
+    </div>
+    <!-- login -->
+
+  </header>
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Employee ID</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your employee id with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="d-grid gap-2">
+              <a href="{% url 'blog' %}" class=" btn btn-primary btn-lg">Login</a>
+
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  {% block body %} {% endblock body %}
+
+  <div class="social">
+    <p>Follow Microsoft</p>
+    <i class="fa-brands fa-youtube fa-2xl dist"></i>
+    <i class="fa-brands fa-square-instagram fa-2xl dist"></i>
+    <i class="fa-brands fa-facebook-f fa-2xl dist"></i>
+    <i class="fa-brands fa-twitter fa-2xl dist"></i>
+
+  </div>
+
+  <div class="box">
+    <div class="box1">
+      <h3>what's new</h3>
+      <p class="foot_p">Microsoft 365</p>
+      <p class="foot_p">Surface Pro X</p>
+      <p class="foot_p">Surface Pro 7</p>
+      <p class="foot_p">Surface laptop 3</p>
+      <p class="foot_p">Windows 11 app</p>
+    </div>
+
+    <div class="box1">
+      <h3>Microsoft Store</h3>
+      <p class="foot_p">Account profile</p>
+      <p class="foot_p">Download Center</p>
+      <p class="foot_p">Microsoft Store Support</p>
+      <p class="foot_p">Returns</p>
+      <p class="foot_p">Order tracking</p>
+    </div>
+
+    <div class="box1">
+      <h3>Education</h3>
+      <p class="foot_p">Microsoft in education</p>
+      <p class="foot_p">Devices for education</p>
+      <p class="foot_p">Microsoft Teams for Education</p>
+      <p class="foot_p">Microsoft 365 Education</p>
+      <p class="foot_p">Educator training and development</p>
+      <p class="foot_p">Deals for students and parents</p>
+      <p class="foot_p">Azure for students</p>
+    </div>
+
+    <div class="box1">
+      <h3>Developer & IT</h3>
+      <p class="foot_p">Developer Center</p>
+      <p class="foot_p">Documentation</p>
+      <p class="foot_p">Microsoft Learn</p>
+      <p class="foot_p">Microsoft Tech Community</p>
+      <p class="foot_p">Azure Marketplace</p>
+      <p class="foot_p">Microsoft Power Platform</p>
+      <p class="foot_p">Visual Studio</p>
+    </div>
+
+    <div class="box1">
+      <h3>Company</h3>
+      <p class="foot_p">Careers</p>
+      <p class="foot_p">About Microsoft</p>
+      <p class="foot_p">Privacy at Microsoft</p>
+      <p class="foot_p">Investors</p>
+      <p class="foot_p">Security</p>
+      <p class="foot_p">Sustainability</p>
+    </div>
+  </div>
+  <script src="{% static 'micro/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'micro/js/jquery.js' %}"></script>
+  <script src="{% static 'micro/js/popper.js' %}"></script>
+  <script src="{% static 'micro/js/base.js' %}"></script>
+  <script src="{% static 'micro/js/all.min.js' %}"></script>
+  {% block script %} {% endblock script %}
+</body>
+</html>

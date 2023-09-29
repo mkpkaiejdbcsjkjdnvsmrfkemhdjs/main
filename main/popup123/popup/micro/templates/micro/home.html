@@ -1,0 +1,134 @@
+{% extends 'micro/base.html' %}
+{% load static %}
+{% block style %} 
+<style>
+.base1_img{
+position: relative;
+}
+.base1_img h1{
+  position: absolute;
+  top: 76px;
+  left: 300px;
+  color: white;
+}
+.base1_img input{
+  position: absolute;
+  top: 180px;
+  left: 300px;
+  width: 580px;
+  height: 50px;
+  text-align: center;
+
+}  
+.kuch_bhi{
+  position: absolute;
+  top: 191px;
+  left: 835px;
+} 
+.body_img{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  margin: 50px auto;
+}
+.box_img{
+  margin: 0 10px;
+  text-align: center;
+}
+.box_img h3{
+  margin: 10px 0;
+}
+.back_img{
+  position: relative;
+
+}
+.back_img_info{
+  padding: 70px 40px;
+  width: 400px;
+  position: absolute;
+  top: 132px;
+  left: 60px;
+  
+}
+.descimg{
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  align-items: center;
+}
+.desc_text{
+  margin: 0 70px;
+}
+.box_img a p{
+  color: black;
+}
+.box_img a{
+  text-decoration: none;
+}
+.box_img a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+</style>
+  {% endblock style %}
+
+{% block body %} 
+<div class="base1_img" ><img width="100%" height="400px" src="{% static 'micro/images/base1.jpg' %}" alt="">
+  <h1>Welcome to Microsoft Support</h1>
+  <input type="text" placeholder="How can we help you?">
+  <i class="fa-solid fa-magnifying-glass fa-xl kuch_bhi"></i>
+</div>
+
+<div class="body_img">
+  <div class="box_img">
+    <img src="{% static 'micro/images/img1.jpg' %}" width="250px" height="150px" alt="">
+    <h3>Surface Laptop Go 2</h3>
+    <a href=""><p class="box_text">A sleek laptop with a 12.4-inch touchscreen, great typing experience and improved HD camera.</p></a>
+  </div>
+
+  <div class="box_img">
+    <img src="{% static 'micro/images/img2.webp' %}" width="250px" height="150px" alt="">
+    <h3>Microsoft 365 for business</h3>
+    <a href=""><p class="box_text">Stay a step ahead with powerful apps for productivity, connection and security.</p></a>
+  </div>
+  <div class="box_img">
+    <img src="{% static 'micro/images/img3.webp' %}" width="250px" height="150px" alt="">
+    <h3>Windows 11 for business is here</h3>
+    <a href=""> <p class="box_text">Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all.</p></a>
+  </div>
+  <div class="box_img">
+    <img src="{% static 'micro/images/img4.webp' %}" width="250px" height="150px" alt="">
+    <h3>Microsoft 365</h3>
+    <a href=""><p class="box_text">Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient subscription.</p></a>
+  </div>
+</div>
+
+<div class="back_img">
+  <img src="{% static 'micro/images/hmback1.png' %}" width="100%" alt="">
+  <div class="back_img_info">
+    <h2>Microsoft Japan</h2>
+    <p>日本マイクロソフト株式会社. 〒108-0075. 東京 都港区港南 2-16-3. 品川グランドセントラルタワー</p>
+    <p>Phone no. +815055328970</p>
+  </div>
+</div>
+
+<div class="descimg">
+  <div class="desc_text">
+    <h3>Protect what’s important</h3>
+    <p>Stay secured and productive on any device. With comprehensive, intelligent, enterprise-grade security features built in, you’ll have peace of mind knowing that your personal information, devices, apps, and data are protected.</p>
+  </div>
+  <img src="{% static 'micro/images/descimg1.webp' %}" width="500px" height="400px" alt="">
+</div>
+
+<div class="descimg">
+  <img src="{% static 'micro/images/descimg2.jpg' %}" width="500px" height="400px" alt="">
+  <div class="desc_text">
+    <h3>Connect from anywhere</h3>
+    <p>Whether you're connecting with family and friends or collaborating with your team, Microsoft Teams lets you meet, chat, call, and collaborate in just one place, keeping you organized and simplifying your day.</p>
+  </div>
+</div>
+
+
+
+ {% endblock body %}
